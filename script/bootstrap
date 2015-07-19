@@ -1,0 +1,17 @@
+#!/bin/sh
+
+echo "====> Getting Ready"
+bundle install > /dev/null
+
+echo "====> Installing Latest Ember CLI"
+npm install -g ember-cli@1.13.1
+
+echo "====> Installing Tooling with NPM"
+npm install > /dev/null
+
+echo "====> Installing Browser Packages with Bower"
+bower install > /dev/null
+
+echo "====> Installing Backend Dependencies with Rubygems"
+cd backend
+bundle install > /dev/null

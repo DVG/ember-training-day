@@ -1,53 +1,27 @@
 # Ember-training-day
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Welcome to Ember Day!
 
-## Prerequisites
+To get started, you should have ruby 2+ and node 0.12+ along with bower.
 
-You will need the following things properly installed on your computer.
+## Preparing
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+Just run
 
-## Installation
+```
+script/bootstrap
+```
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+To install all the dependencies for the backend and frontend
 
-## Running / Development
+## Starting Off
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+Run
 
-### Code Generators
+```
+script/server
+```
 
-Make use of the many generators for code, try `ember help generate` for more details
+To start the ember app and the rails backend.
 
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+Then visit: http://localhost:4200/cards to get started!
