@@ -2,7 +2,7 @@
   .navbar.nav.navbar-default
     .container-fluid
       .navbar-header
-        a.navbar-brand href="#" Brand
+        a.navbar-brand href="#" Ember Movie Database
 
       .collapse.navbar-collapse
         ul.nav.navbar-nav

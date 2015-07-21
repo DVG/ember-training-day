@@ -6,14 +6,28 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-star_wars = Movie.find_or_create_by name: "Star Wars", release: DateTime.new(1977, 5, 25), year: 1977
-the_empire_strikes_back = Movie.find_or_create_by name: "Star Wars: The Empire Strikes Back", release: DateTime.new(1980, 6, 20), year: 1980
-the_return_of_the_jedi = Movie.find_or_create_by name: "Star Wars: The Return of the Jedi", release: DateTime.new(1983, 5, 25), year: 1983
+star_wars = Movie.find_or_create_by name: "Star Wars", release: DateTime.new(1977, 5, 25), year: 1977, description: %{
+Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a wookiee and two droids to save the universe from the Empire's world-destroying battle-station, while also attempting to rescue Princess Leia from the evil Darth Vader.
+}
+the_empire_strikes_back = Movie.find_or_create_by name: "Star Wars: The Empire Strikes Back", release: DateTime.new(1980, 6, 20), year: 1980, description: %{
+After the rebels have been brutally overpowered by the Empire on their newly established base, Luke Skywalker takes advanced Jedi training with Master Yoda, while his friends are pursued by Darth Vader as part of his plan to capture Luke.
+}
+the_return_of_the_jedi = Movie.find_or_create_by name: "Star Wars: The Return of the Jedi", release: DateTime.new(1983, 5, 25), year: 1983, description: %{
+After rescuing Han Solo from the palace of Jabba the Hutt, the rebels attempt to destroy the second Death Star, while Luke struggles to make Vader return from the dark side of the Force.
+}
 
-the_avengers = Movie.find_or_create_by name: "The Avengers", release: DateTime.new(2012, 5, 4), year: 2012
-iron_man_movie = Movie.find_or_create_by name: "Iron Man", release: DateTime.new(2008, 5, 2), year: 2008
-iron_man_2 = Movie.find_or_create_by name: "Iron Man 2", release: DateTime.new(2010, 5, 7), year: 2010
-iron_man_3 = Movie.find_or_create_by name: "Iron Man 3", release: DateTime.new(2013, 5, 3), year: 2013
+the_avengers = Movie.find_or_create_by name: "The Avengers", release: DateTime.new(2012, 5, 4), year: 2012, description: %{
+Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.
+}
+iron_man_movie = Movie.find_or_create_by name: "Iron Man", release: DateTime.new(2008, 5, 2), year: 2008, description: %{
+Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.
+}
+iron_man_2 = Movie.find_or_create_by name: "Iron Man 2", release: DateTime.new(2010, 5, 7), year: 2010, description: %{
+With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father's legacy.
+}
+iron_man_3 = Movie.find_or_create_by name: "Iron Man 3", release: DateTime.new(2013, 5, 3), year: 2013, description: %{
+When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.
+}
 
 harrison_ford = Actor.find_or_create_by name: "Harrison Ford"
 mark_hammil = Actor.find_or_create_by name: "Mark Hammil"
@@ -116,17 +130,20 @@ add_clue "In emblem templates, you can output a plain text string by starting th
 add_clue %{You can interpolate emblem plaintext lines: `|  (\#{foo.bar})`}, card: add_year
 
 movies_show = Card.find_or_create_by title: "Create Movie Show Page",
-                       description: %{Create a page that shows at /movies/1/
-                         You'll need to create a route and a template, as well as update router.coffee.
- 
-                         When creating nested routes, you'll want to create a folder in each section. So, for a show route nested under movies,
-                         you'll need app/routes/movies/show.coffee and app/templates/movies/show.emblem.
+                       description: %{
+Create a page that shows at /movies/1/
 
-                         Get started with ember g route movies/show
+You'll need to create a route and a template, as well as update router.coffee.
+
+When creating nested routes, you'll want to create a folder in each section. So, for a show route nested under movies,
+you'll need app/routes/movies/show.coffee and app/templates/movies/show.emblem.
+
+Get started with ember g route movies/show
                        },
                        complete: false,
                        difficulty: MEDIUM,
-                       comments: %{You'll need to create a route and a template, as well as update router.coffee}
+                       comments: %{
+You'll need to create a route and a template, as well as update router.coffee}
 
 
 add_clue %{See: http://guides.emberjs.com/v1.13.0/routing/defining-your-routes/ for help defining the route}, card: movies_show
