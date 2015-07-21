@@ -8,4 +8,4 @@
             i.fa.fa-check
             |  Complete
     .panel-body
-      = card.description
+      = markdown-to-html markdown=card.description
