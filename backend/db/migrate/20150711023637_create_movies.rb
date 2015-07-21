@@ -3,6 +3,7 @@ class CreateMovies < ActiveRecord::Migration
     create_table :movies do |t|
       t.string :name
       t.datetime :release
+      t.integer :year
 
       t.timestamps null: false
     end

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd backend
+
+echo "====> Redoing backend db"
+rake db:drop > /dev/null
+rake db:migrate > /dev/null
+rake db:seed > /dev/null

@@ -6,14 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-star_wars = Movie.find_or_create_by name: "Star Wars", release: DateTime.new(1977, 5, 25)
-the_empire_strikes_back = Movie.find_or_create_by name: "Star Wars: The Empire Strikes Back", release: DateTime.new(1980, 6, 20)
-the_return_of_the_jedi = Movie.find_or_create_by name: "Star Wars: The Return of the Jedi", release: DateTime.new(1983, 5, 25)
+star_wars = Movie.find_or_create_by name: "Star Wars", release: DateTime.new(1977, 5, 25), year: 1977
+the_empire_strikes_back = Movie.find_or_create_by name: "Star Wars: The Empire Strikes Back", release: DateTime.new(1980, 6, 20), year: 1980
+the_return_of_the_jedi = Movie.find_or_create_by name: "Star Wars: The Return of the Jedi", release: DateTime.new(1983, 5, 25), year: 1983
 
-the_avengers = Movie.find_or_create_by name: "The Avengers", release: DateTime.new(2012, 5, 4)
-iron_man_movie = Movie.find_or_create_by name: "Iron Man", release: DateTime.new(2008, 5, 2)
-iron_man_2 = Movie.find_or_create_by name: "Iron Man 2", release: DateTime.new(2010, 5, 7)
-iron_man_3 = Movie.find_or_create_by name: "Iron Man 3", release: DateTime.new(2013, 5, 3)
+the_avengers = Movie.find_or_create_by name: "The Avengers", release: DateTime.new(2012, 5, 4), year: 2012
+iron_man_movie = Movie.find_or_create_by name: "Iron Man", release: DateTime.new(2008, 5, 2), year: 2008
+iron_man_2 = Movie.find_or_create_by name: "Iron Man 2", release: DateTime.new(2010, 5, 7), year: 2010
+iron_man_3 = Movie.find_or_create_by name: "Iron Man 3", release: DateTime.new(2013, 5, 3), year: 2013
 
 harrison_ford = Actor.find_or_create_by name: "Harrison Ford"
 mark_hammil = Actor.find_or_create_by name: "Mark Hammil"
@@ -94,3 +94,16 @@ Appearance.find_or_create_by character: luke_skywalker, actor: mark_hammil, movi
 Appearance.find_or_create_by character: princess_leia, actor: carrie_fisher, movie: the_return_of_the_jedi
 Appearance.find_or_create_by character: obi_wan, actor: alec_guinness, movie: the_return_of_the_jedi
 Appearance.find_or_create_by character: chewbacca, actor: peter_mayhew, movie: the_return_of_the_jedi
+
+TRIVIAL = "1 - Trivial"
+EASY    = "2 - Easy"
+MEDIUM  = "3 - Moderate"
+TRICKY  = "4 - Tricky"
+HARD    = "5 - HARD"
+
+Card.find_or_create_by title: "Add Year to Movies List", 
+                       description: %{Add the Movie Year to the Title Link},
+                       complete: false, 
+                       difficulty: TRIVIAL,
+                       comments: "E.g. Star Wars (1977)",
+                       clue_1: ""

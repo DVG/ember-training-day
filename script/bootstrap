@@ -3,10 +3,10 @@
 echo "====> Getting Ready"
 bundle install > /dev/null
 
-echo "====> Installing Latest Ember CLI"
+echo "====> Installing Latest Ember CLI (this is slow)"
 npm install -g ember-cli@1.13.1
 
-echo "====> Installing Tooling with NPM"
+echo "====> Installing Tooling with NPM (also slow)"
 npm install > /dev/null
 
 echo "====> Installing Browser Packages with Bower"
@@ -15,3 +15,9 @@ bower install > /dev/null
 echo "====> Installing Backend Dependencies with Rubygems"
 cd backend
 bundle install > /dev/null
+
+echo "====> Setting up Development DB"
+bin/rake db:migrate > /dev/null
+bin/rake db:seed > /dev/null
+
+echo "====> All Set! Run script/server to get started"
