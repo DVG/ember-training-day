@@ -20,7 +20,7 @@ the_avengers = Movie.find_or_create_by name: "The Avengers", release: DateTime.n
 Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.
 }
 iron_man_movie = Movie.find_or_create_by name: "Iron Man", release: DateTime.new(2008, 5, 2), year: 2008, description: %{
-Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.
+After being held captive in an Afghan cave, an industrialist creates a unique weaponized suit of armor to fight evil
 }
 iron_man_2 = Movie.find_or_create_by name: "Iron Man 2", release: DateTime.new(2010, 5, 7), year: 2010, description: %{
 With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father's legacy.
