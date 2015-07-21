@@ -16,4 +16,5 @@
               link-to "Cards" "cards"
 
   = outlet
-  = outlet modal
+
+= outlet 'modal'
