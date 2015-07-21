@@ -1,5 +1,5 @@
 class MoviesSerializer < ActiveModel::Serializer
-  attributes :id, :name, :release_date, :characters, :actors
+  attributes :id, :name, :release_date, :year, :characters, :actors
 
   def release_date
     object.release

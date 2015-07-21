@@ -6,6 +6,7 @@ Router = Ember.Router.extend
 
 Router.map ->
   @route "index", { path: "/" }
+  @route "movies", { path: "/movies" }
   @route "cards", { path: "/cards" }
   
 `export default Router`

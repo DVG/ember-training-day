@@ -9,10 +9,10 @@
           li
             a href="#" Actors
           li
-            a href="#" Movies
+            link-to "Movies" "movies"
         .pull-right
           ul.nav.navbar-nav
             li
-              a href="#" Cards
+              link-to "Cards" "cards"
 
   = outlet

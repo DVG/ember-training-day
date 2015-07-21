@@ -106,4 +106,19 @@ Card.find_or_create_by title: "Add Year to Movies List",
                        complete: false, 
                        difficulty: TRIVIAL,
                        comments: "E.g. Star Wars (1977)",
-                       clue_1: ""
+                       clue_1: "Check the ember model class out at app/models/movie.coffee to see the attributes",
+                       clue_2: "In emblem templates, you can output a plain text string by starting the line with a pipe: `| Hello World`",
+                       clue_3: %{You can interpolate emblem plaintext lines: `|  (#{foo.bar})`}
+Card.find_or_create_by title: "Create Movie Show Page",
+                       description: %{Create a page that shows at /movies/1/
+                         You'll need to create a route and a template, as well as update router.coffee.
+ 
+                         When creating nested routes, you'll want to create a folder in each section. So, for a show route nested under movies,
+                         you'll need app/routes/movies/show.coffee and app/templates/movies/show.emblem.
+                       },
+                       complete: false,
+                       difficulty: MEDIUM,
+                       comments: %{You'll need to create a route and a template, as well as update router.coffee},
+                       clue_1: %{See: http://guides.emberjs.com/v1.13.0/routing/defining-your-routes/ for help defining the route},
+                       clue_2: %{The route object exposes a hook called model for loading data},
+                       clue_3: %{Use DS.Store's find method to load the data from the backend}

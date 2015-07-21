@@ -1,0 +1,13 @@
+.row
+  .col-md-4
+    table.table.table-striped
+      thead
+        tr
+          th Movie
+      tbody
+        each model as |movie|
+          tr
+            td 
+              = movie.name
+  .col-md-8
+    = outlet
