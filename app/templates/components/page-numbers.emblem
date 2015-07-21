@@ -1,0 +1,18 @@
+if showOnlyOne
+  li.disabled
+    a disabled="disabled" 1
+else
+  li class={:left-arrow atBeginning:disabled}
+    a href="#" disabled=atBeginning:disabled click="firstPage" &laquo;
+  if displayLeftElipsis
+    li.disabled.elipsis.left-elipsis
+      a disabled="disabled" ...
+  each page in pages
+    li class=page.current:active
+      a href="#" click="updateCurrentPage page.page"
+        page.page
+  if displayRightElipsis
+    li.disabled.elipsis.right-elipsis
+      a href="#" disabled="disabled" ...
+  li class={:right-arrow atEnd:disabled}
+    a href="#" disabled=atEnd:disabled click="lastPage" &raquo;
