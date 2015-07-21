@@ -121,6 +121,8 @@ movies_show = Card.find_or_create_by title: "Create Movie Show Page",
  
                          When creating nested routes, you'll want to create a folder in each section. So, for a show route nested under movies,
                          you'll need app/routes/movies/show.coffee and app/templates/movies/show.emblem.
+
+                         Get started with ember g route movies/show
                        },
                        complete: false,
                        difficulty: MEDIUM,
