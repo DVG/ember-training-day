@@ -1,0 +1,17 @@
+#!/bin/sh
+
+echo "====> Installing Tooling with NPM"
+npm install > /dev/null
+
+echo "====> Installing Browser Packages with Bower"
+bower install > /dev/null
+
+echo "====> Installing Backend Dependencies with Rubygems"
+cd backend
+bundle install > /dev/null
+
+echo "====> Setting up Development DB"
+bin/rake db:migrate > /dev/null
+bin/rake db:seed > /dev/null
+
+echo "====> All Set! Run script/server to get started"
