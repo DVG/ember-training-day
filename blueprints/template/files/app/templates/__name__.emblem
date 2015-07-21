@@ -1,0 +1,46 @@
+/ This is an emblem template. It works more or less like a slim template in ruby.
+
+/ To create an element, you simply start the line with the name of the element:
+/ h2
+
+/ Any elements indented under that element will be contained within that element in the final HTML
+/ div
+/   p
+/ will produce:
+/ <div><p></p></div>
+
+/ You can place classes or ids on the element with .class-name or #id-tag
+/ div.some-class#some-id
+
+/ If the element is a div, the tagname can be omitted, as this is the default:
+/ .some-class#some-id
+/ produces:
+/ <div class="some-class" id="some-id"></div>
+
+/ You can assign arbitrary html attributes like so:
+/ div style="display: none;"
+
+/ Plaintext can be placed at the end of the line, and will be nested in the element
+/ p hello world!
+/ produces
+/ <p>hello world!</p>
+
+/ You can have a line of plaintext by starting the line with a |
+/ p
+/   | Hello World!
+/ produces:
+/ <p>Hello World!</p>
+
+/ You can interpolate values in plaintext:
+/ p
+/   | Hello #{model.name}
+/ produces:
+/ <p>Hello Fred</p>
+
+/ Handlebars helpers and controller properties can be used by starting the line with =
+/ = each model as |foo|
+/   = foo.name
+/ The = is optional for helpers and properties that don't conflict with HTML elements, so you must
+/ include it for the input helper, but you are not requried to use it for the each helper
+
+/ Those are the basics, see http://emblemjs.com/ for further deatils
