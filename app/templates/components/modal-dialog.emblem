@@ -1,0 +1,6 @@
+#app-modal
+  .modal-backdrop.fade
+  .modal.fade
+    .modal-dialog
+      .modal-content
+        yield
