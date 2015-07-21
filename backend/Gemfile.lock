@@ -44,11 +44,6 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
-    carrierwave (0.10.0)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
-      json (>= 1.7)
-      mime-types (>= 1.16)
     columnize (0.9.0)
     debug_inspector (0.0.2)
     erubis (2.7.0)
@@ -120,7 +115,6 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   byebug
-  carrierwave
   rails (= 4.2.1)
   rails-api
   spring

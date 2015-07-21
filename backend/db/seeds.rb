@@ -101,15 +101,21 @@ MEDIUM  = "3 - Moderate"
 TRICKY  = "4 - Tricky"
 HARD    = "5 - HARD"
 
-Card.find_or_create_by title: "Add Year to Movies List", 
+def add_clue(clue, card:)
+  card.clues.create(content: clue)  
+end
+
+add_year = Card.find_or_create_by title: "Add Year to Movies List", 
                        description: %{Add the Movie Year to the Title Link},
                        complete: false, 
                        difficulty: TRIVIAL,
-                       comments: "E.g. Star Wars (1977)",
-                       clue_1: "Check the ember model class out at app/models/movie.coffee to see the attributes",
-                       clue_2: "In emblem templates, you can output a plain text string by starting the line with a pipe: `| Hello World`",
-                       clue_3: %{You can interpolate emblem plaintext lines: `|  (#{foo.bar})`}
-Card.find_or_create_by title: "Create Movie Show Page",
+                       comments: "E.g. Star Wars (1977)"
+
+add_clue "Check the ember model class out at app/models/movie.coffee to see the attributes", card: add_year
+add_clue "In emblem templates, you can output a plain text string by starting the line with a pipe: `| Hello World`", card: add_year
+add_clue %{You can interpolate emblem plaintext lines: `|  (\#{foo.bar})`}, card: add_year
+
+movies_show = Card.find_or_create_by title: "Create Movie Show Page",
                        description: %{Create a page that shows at /movies/1/
                          You'll need to create a route and a template, as well as update router.coffee.
  
@@ -118,7 +124,9 @@ Card.find_or_create_by title: "Create Movie Show Page",
                        },
                        complete: false,
                        difficulty: MEDIUM,
-                       comments: %{You'll need to create a route and a template, as well as update router.coffee},
-                       clue_1: %{See: http://guides.emberjs.com/v1.13.0/routing/defining-your-routes/ for help defining the route},
-                       clue_2: %{The route object exposes a hook called model for loading data},
-                       clue_3: %{Use DS.Store's find method to load the data from the backend}
+                       comments: %{You'll need to create a route and a template, as well as update router.coffee}
+
+
+add_clue %{See: http://guides.emberjs.com/v1.13.0/routing/defining-your-routes/ for help defining the route}, card: movies_show
+add_clue %{The route object exposes a hook called model for loading data}, card: movies_show
+add_clue %{Use DS.Store's find method to load the data from the backend}, card: movies_show

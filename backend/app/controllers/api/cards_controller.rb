@@ -17,7 +17,7 @@ class Api::CardsController < ApplicationController
 
     def update
       @card = Card.find(params[:id])
-      render json: @card.update_attribtues(card_params), serializer: CardsSerializer
+      render json: @card.update_attributes(card_params), serializer: CardsSerializer
     end
 
     def destroy

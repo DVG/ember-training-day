@@ -5,7 +5,6 @@ class CreateCards < ActiveRecord::Migration
       t.text :description
       t.string :difficulty
       t.boolean :complete
-      t.text :clue_1, :clue_2, :clue_3
       t.text :comments
       t.timestamps null: false
     end
