@@ -60,8 +60,9 @@ ActiveRecord::Schema.define(version: 20150721024913) do
     t.string   "name"
     t.datetime "release"
     t.integer  "year"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
