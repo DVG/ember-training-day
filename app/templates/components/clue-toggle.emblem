@@ -1,0 +1,8 @@
+if toggled
+  i.fa.fa-minus
+else
+  i.fa.fa-plus
+strong  A Clue!
+if toggled
+  br
+  = markdown-to-html markdown=clue.content

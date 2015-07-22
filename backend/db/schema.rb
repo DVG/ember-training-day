@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20150721024913) do
     t.string   "difficulty"
     t.boolean  "complete"
     t.text     "comments"
+    t.integer  "points"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

@@ -6,6 +6,7 @@ class CreateCards < ActiveRecord::Migration
       t.string :difficulty
       t.boolean :complete
       t.text :comments
+      t.integer :points
       t.timestamps null: false
     end
   end

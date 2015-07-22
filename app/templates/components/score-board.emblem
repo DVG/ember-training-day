@@ -1,2 +1,4 @@
 if shouldDisplay
-  = score
+  | Points:  
+  span.label.label-success
+    = score

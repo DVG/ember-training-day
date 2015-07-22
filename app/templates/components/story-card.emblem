@@ -3,9 +3,14 @@ if shouldDisplay
     .panel-heading
       .panel-title
         = card.title
+        |   
+        = card.difficulty
         .pull-right
           a.btn.btn-primary.btn-xs{action "complete" card on="click"} href="#" 
             i.fa.fa-check
             |  Complete
     .panel-body
       = markdown-to-html markdown=card.description
+
+      each card.clues as |clue|
+        clue-toggle clue=clue
