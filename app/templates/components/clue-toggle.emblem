@@ -1,8 +1,8 @@
 if toggled
-  i.fa.fa-minus
+  i.fa.fa-minus click="toggle"
 else
-  i.fa.fa-plus
-strong  A Clue!
+  i.fa.fa-plus click="toggle"
+strong click="toggle"  A Clue!
 if toggled
   br
   = markdown-to-html markdown=clue.content

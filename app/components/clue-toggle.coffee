@@ -5,7 +5,9 @@ ClueToggle = Ember.Component.extend
   content: null
   classNames: ['well']
 
-  click: ->
-    @toggleProperty('toggled')
+
+  actions:
+    toggle: () ->
+      @toggleProperty('toggled')
 
 `export default ClueToggle`
