@@ -71,7 +71,7 @@ PageNumbersComponent = Ember.Component.extend
       total
 
   actions:
-    updateCurrentPage: (page) ->
+    updatePage: (page) ->
       @sendAction('action', page)
     firstPage: ->
       @sendAction('action', 1)
