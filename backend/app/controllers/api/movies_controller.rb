@@ -12,13 +12,21 @@ module Api
     end
 
     def create
-      @movie = Movie.create(movie_params)
-      render json: @movie, serializer: MoviesSerializer
+      @movie = Movie.new(movie_params)
+      if @movie.save
+        render json: @movie, serializer: MoviesSerializer
+      else
+        render json: { errors: @movie.errors }, status: 422
+      end
     end
 
     def update
       @movie = Movie.find(params[:id])
-      render json: @movie.update_attribtues(movie_params), serializer: MoviesSerializer
+      if @movie.update_attributes(movie_params)
+        render json: @movie, serializer: MoviesSerializer
+      else
+        render json: { errors: @movie.errors }, status: 422
+      end
     end
 
     def destroy
