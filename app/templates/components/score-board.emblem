@@ -1,2 +1,2 @@
 if shouldDisplay
-  = totalScore
+  = score

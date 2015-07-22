@@ -7,14 +7,14 @@
       .collapse.navbar-collapse
         ul.nav.navbar-nav
           li
-            a href="#" Actors
+            link-to "Actors" "actors"
           li
             link-to "Movies" "movies"
         .pull-right
           ul.nav.navbar-nav
             li
               link-to "cards"
-                score-board cards=cards
+                score-board score=score
             li
               link-to "Cards" "cards"
 

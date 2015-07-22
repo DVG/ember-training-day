@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     resources :characters
     resources :movies
     resources :cards 
+    resources :scores
   end
 end

@@ -3,10 +3,7 @@
 ScoreBoard = Ember.Component.extend
   tagName: 'span'
   classNames: ['label', 'label-success']
-  scores: Ember.computed.map 'cards', (card, index) ->
-    card.get('points')
-  totalScore: Ember.computed.sum('scores')
-  shouldDisplay: Ember.computed.gt('totalScore', 0)
+  shouldDisplay: Ember.computed.gt('score', 0)
 
 
 `export default ScoreBoard`

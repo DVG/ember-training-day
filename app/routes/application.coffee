@@ -3,10 +3,15 @@
 ApplicationRoute = Ember.Route.extend
 
   model: () ->
-    @store.findAll('card')
+    new Ember.RSVP.Promise (resolve, reject) ->
+      Ember.$.getJSON('/api/scores.json').then( (response) ->
+        resolve response
+      , (error) ->
+        reject error
+      )
     
   setupController: (controller, model) ->
-    controller.set('cards', model)
+    controller.set('score', model.score)
   
   actions:
     openModal: (modalController, properties={}) ->
