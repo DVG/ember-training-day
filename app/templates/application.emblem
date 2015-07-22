@@ -7,7 +7,7 @@
       .collapse.navbar-collapse
         ul.nav.navbar-nav
           li
-            link-to "Actors" "actors"
+            a href="#" Actors
           li
             link-to "Movies" "movies"
         .pull-right
