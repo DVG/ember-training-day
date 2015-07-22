@@ -1,6 +1,12 @@
 `import Ember from 'ember'`
 
 ApplicationRoute = Ember.Route.extend
+
+  model: () ->
+    @store.findAll('card')
+    
+  setupController: (controller, model) ->
+    controller.set('cards', model)
   
   actions:
     openModal: (modalController, properties={}) ->

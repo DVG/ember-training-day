@@ -13,6 +13,9 @@
         .pull-right
           ul.nav.navbar-nav
             li
+              link-to "cards"
+                score-board cards=cards
+            li
               link-to "Cards" "cards"
 
   = outlet

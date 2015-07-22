@@ -1,11 +1,2 @@
  each model as |card|
-  .panel.panel-default
-    .panel-heading
-      .panel-title
-        = card.title
-        .pull-right
-          a.btn.btn-primary.btn-xs{action "complete" card on="click"} href="#" 
-            i.fa.fa-check
-            |  Complete
-    .panel-body
-      = markdown-to-html markdown=card.description
+  story-card card=card action='complete'

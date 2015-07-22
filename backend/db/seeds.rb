@@ -115,22 +115,23 @@ MEDIUM  = "3 - Moderate"
 TRICKY  = "4 - Tricky"
 HARD    = "5 - HARD"
 
-def add_clue(clue, card:)
-  card.clues.create(content: clue)  
+def create_card(attributes={})
+  card = Card.find_or_create_by(attributes)
+  yield card
 end
 
-add_year = Card.find_or_create_by title: "Add Year to Movies List", 
-                       description: %{Add the Movie Year to the Title Link},
-                       complete: false, 
-                       difficulty: TRIVIAL,
-                       comments: "E.g. Star Wars (1977)"
+create_card title: "Add Year to Movies List", 
+            description: %{Add the Movie Year to the Title Link},
+            complete: false, 
+            difficulty: TRIVIAL,
+            comments: "E.g. Star Wars (1977)" do |card|
+  card.add_clue %{Check the ember model class out at app/models/movie.coffee to see the attributes}
+  card.add_clue %{In emblem templates, you can output a plain text string by starting the line with a pipe: `| Hello World`}
+  card.add_clue %{You can interpolate emblem plaintext lines: `|  (\#{foo.bar})`}
+end
 
-add_clue "Check the ember model class out at app/models/movie.coffee to see the attributes", card: add_year
-add_clue "In emblem templates, you can output a plain text string by starting the line with a pipe: `| Hello World`", card: add_year
-add_clue %{You can interpolate emblem plaintext lines: `|  (\#{foo.bar})`}, card: add_year
-
-movies_show = Card.find_or_create_by title: "Create Movie Show Page",
-                       description: %{
+create_card title: "Create Movie Show Page",
+            description: %{
 Create a page that shows at /movies/1/
 
 You'll need to create a route and a template, as well as update router.coffee.
@@ -138,14 +139,16 @@ You'll need to create a route and a template, as well as update router.coffee.
 When creating nested routes, you'll want to create a folder in each section. So, for a show route nested under movies,
 you'll need app/routes/movies/show.coffee and app/templates/movies/show.emblem.
 
-Get started with ember g route movies/show
+Get started with `$ ember g route movies/show`
                        },
-                       complete: false,
-                       difficulty: MEDIUM,
-                       comments: %{
-You'll need to create a route and a template, as well as update router.coffee}
+            complete: false,
+            difficulty: MEDIUM,
+            comments: %{
+You'll need to create a route and a template, as well as update router.coffee} do |card|
+  card.add_clue %{See: http://guides.emberjs.com/v1.13.0/routing/defining-your-routes/ for help defining the route}
+  card.add_clue %{The route object exposes a hook called model for loading data}
+  card.add_clue %{Use DS.Store's find method to load the data from the backend}
+end
 
 
-add_clue %{See: http://guides.emberjs.com/v1.13.0/routing/defining-your-routes/ for help defining the route}, card: movies_show
-add_clue %{The route object exposes a hook called model for loading data}, card: movies_show
-add_clue %{Use DS.Store's find method to load the data from the backend}, card: movies_show
+
