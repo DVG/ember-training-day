@@ -20,7 +20,7 @@
   #   submitTheForm: () ->
   #     @get('model').set('someAttr', true).save()
   
-  actions:
+  # actions:
 
 
 `export default <%= classifiedModuleName %>Controller`

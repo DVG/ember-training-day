@@ -36,7 +36,7 @@
   #   @_super(controller, model) # Set model property on controller
 
 
-  actions:
+  # actions:
 
     # The willTransition action is fired when you are about to exit a route by navigating somewhere else
     # or forcibly transitioning through some other means. This hook provides an opportunity to display a 
