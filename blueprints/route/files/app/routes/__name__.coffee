@@ -19,7 +19,7 @@
   # See http://guides.emberjs.com/v1.10.0/routing/defining-your-routes/ for information on defining
   # parameters with dynamic segments
   #
-  # model: (params, transition) ->
+  model: (params, transition) ->
 
   # afterModel is called after the model hook has resolved, and more or less works like beforeModel, 
   # and is appropriate for any operation that needs to be done after the model has resolved but before
