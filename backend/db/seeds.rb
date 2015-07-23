@@ -127,7 +127,7 @@ def create_card(attributes={})
 end
 
 create_card title: "Add Year to Movies List", 
-            description: %{Add the Movie Year to the Title Link},
+            description: %{Add the Movie Year to the Title List},
             complete: false, 
             difficulty: TRIVIAL,
             points: TRIVIAL_POINTS,
@@ -179,7 +179,7 @@ Add description to the movie model and show it in the template
             difficulty: EASY,
             points: EASY_POINTS do |card|
   card.add_clue %{The description field returned from the API is a string, so use DS.attr('string') to define it}
-  card.add_clue %{You can view the returned json by hitting `localhost:3000/api/movie/1.json`}
+  card.add_clue %{You can view the returned json by hitting `localhost:3000/api/movies/1.json`}
   card.add_clue %{Don't worry about the other records for now}
 end
 
