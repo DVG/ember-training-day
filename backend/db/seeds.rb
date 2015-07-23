@@ -282,6 +282,8 @@ create_card title: "New Movie Route",
 Time to make the new movie form! We're gonna let users fill our database up with made-up movies! Web 2.0 dream right here.
 
     $ ember g route movies/new
+
+Update the new button from the previous card to link-to the movies.new route.
                        },
             complete: false,
             difficulty: MEDIUM,
