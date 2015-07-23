@@ -193,9 +193,9 @@ Look at the json returned from `localhost:3000/api/movies.json`. You'll notice t
 
 Go ahead and define models for these.
 
-`ember g model appearance`
-`ember g model character`
-`ember g model actor`
+    ember g model appearance
+    ember g model character
+    ember g model actor
 
 And define their properties and relationships
                        },
